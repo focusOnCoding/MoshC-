@@ -8,7 +8,7 @@ namespace HelloWorld
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("Im back baby whos going to cery the bots");
-            // 31:00 111 2222
+            
         }
     }
 }
