@@ -1,0 +1,3 @@
+ctrl + alt + l = move to solution
+ctrl + tab  switch between files
+shift + Esc = exit errors & warnnings panel
