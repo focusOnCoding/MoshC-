@@ -28,6 +28,9 @@ namespace Classes_Demo
             Calculater calculater = new Calculater();
             var result = calculater.Add(1, 2);
             Console.WriteLine(result); // output the variables value 
+
+            Console.WriteLine("Enums Demo ----------------------------------------------------------------------------");
+
         }
     }
 }
