@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Control_Flow
 {
-    class Season
+    public enum Season
     {
+        Spring,
+        Summer,
+        Autumn,
+        Winter
     }
 }
