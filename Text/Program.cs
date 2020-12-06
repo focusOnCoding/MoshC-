@@ -10,7 +10,7 @@ namespace Text
             var fullName = "Siyabonga Dlamini";
             Console.WriteLine("Trim: {0}", fullName.Trim()); // trim white space
             Console.WriteLine("ToUpper: {0}", fullName.Trim().ToUpper());
-            
+
             // separate Name and Surname 
             var index = fullName.IndexOf(' ');
             var firstName = fullName.Substring(0, index);
@@ -47,34 +47,10 @@ namespace Text
 
             Console.WriteLine("Summarizing Text-------------------------------------------------------");
 
-            var sentence = "This is going to be a really really really really long text";
-            const int maxlength = 20;
-            if (sentence.Length < maxlength)
-            {
-                Console.WriteLine(sentence);
-            }
-            else
-            {
-                // poor way
-                //sentence.Substring(0, maxlength);
-
-                // better way
-                var words = sentence.Split(" ");
-                var totalCharacters = 0;
-                var summaryWords = new List<string>();
-                foreach (var word in words)
-                {
-                    totalCharacters += words.Length + 1;
-                    if (totalCharacters > maxlength)
-                    {
-                        break;
-                    }
-                }
-
-                var summary = String.Join(" ", summaryWords) + "...";
-                Console.WriteLine(summary);
-                // 39
-            }
+            var text = "This is going to be a really really really really really long text";
+            var summary = stringUtility.SummerizeText(text, 35);
+            Console.WriteLine(summary);
         }
+        
     }
 }
