@@ -7,7 +7,7 @@ namespace CSharpFundamentals
     {
         public static void Main(string[] args)
         {
-            var numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
+            var numbers = new List<int> { 1, 2 };
             var smallests = GetSmallests(numbers, 3);
 
             foreach (var number in smallests)
@@ -16,13 +16,17 @@ namespace CSharpFundamentals
 
         public static List<int> GetSmallests(List<int> list, int count)
         {
+            // remove side effect and create a copy of the list to work with
+            var buffer = new List<int>(list);
             var smallests = new List<int>();
 
             while (smallests.Count < count)
             {
                 var min = GetSmallest(list);
                 smallests.Add(min);
-                list.Remove(min);
+                //list.Remove(min); 
+                // change list to buffer
+                buffer.Remove(min);
             }
 
             return smallests;
@@ -34,7 +38,7 @@ namespace CSharpFundamentals
             var min = list[0];
             for (var i = 1; i < list.Count; i++)
             {
-                if (list[i] > min)
+                if (list[i] < min)
                     min = list[i];
             }
             return min;
